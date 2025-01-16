@@ -2,12 +2,11 @@
 
 /*CSS variables*/
 :root{
-  --baseblue :#28bdd1;
+  --baseblue :#0d5669;
   --white:#fff;
   --black:#000;
   --whiteshade:#f7f5f5;
 }
-
 
 *{
   border:none;
@@ -26,10 +25,15 @@ body,html{
   height:10vh;
   align-items: center;
   justify-content:space-between;
-  background: var(--white);
+  background: rgba(255,255,255,0.5);
+  border:0.5px solid var(--white);
   padding:10px;
   backdrop-filter: blur(10px);
   border-radius:50px;
+  position:fixed;
+  top:1%;
+  margin:0 auto;
+  z-index:1000;
 }
 .nav-logo{
   width:3em;
@@ -38,7 +42,7 @@ body,html{
   mix-blend-mode:multiply;
 }
 .nav-brand{
-  color:grey;
+  color:var(--black);
 }
 /*Hero*/
 .hero{
@@ -50,9 +54,19 @@ body,html{
   justify-content:space-between;
   flex-direction: column;
   margin-top:25%;
-  overflow-x:hidden;
+  overflow:hidden;
   z-index:100;
   background-color:var(--whiteshade);
+}
+.hero::after{
+  content:'';
+  position: absolute;
+  width:100%;
+  height:100%;
+  background-color:var(--baseblue);
+  opacity:0.1;
+  z-index: -2;
+  top:0%;
 }
 .circle1{
   position: absolute;
@@ -77,14 +91,15 @@ body,html{
 .hero-text{
   font-size: 2em;
   width:90vw;
-  color: transparent;
+  color: var(--black);
   -webkit-text-stroke:2px var(--black);
   padding:2px;
   z-index: 10;
 }
 .hero-subtext{
-  width:90vw;
+  width:85vw;
   margin-left:2px;
+  text-align:left;
   z-index:10;
 }
 .join-us-btn{
