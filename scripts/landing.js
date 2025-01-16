@@ -4,7 +4,7 @@
 import {createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
 //Initialise Vue app.
 const Card = {
-  template:`<div class="card">
+  template:`<div class="card" data-aos="fade-up">
         <div class="card-img-container">
           <img :src="cardImg" alt="Card Image" class="card-img"/>
         </div>
@@ -31,3 +31,12 @@ const app = createApp({
 //Mount app.
 app.component('card',Card);
 app.mount('#app');
+
+/*AOS Library*/
+AOS.init({
+  offset: 10, // Offset from the original trigger point
+  delay: 10, // Delay in milliseconds
+  duration: 800, // Animation duration
+  easing: 'linear', // Easing function
+  once: false, // Whether animation should happen only once
+});
