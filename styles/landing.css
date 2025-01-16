@@ -57,6 +57,7 @@ body,html{
   overflow:hidden;
   z-index:100;
   background-color:var(--whiteshade);
+  border:1px solid var(--white);
 }
 .hero::after{
   content:'';
@@ -158,5 +159,14 @@ body,html{
   .hero-text{
     width:50vw;
     padding:18px;
+  }
+  .nav-bar{
+    height:5vh;
+  }
+  .hero-subtext{
+    margin-left:40%;
+  }
+  .card-text{
+    width:40vw;
   }
 }
