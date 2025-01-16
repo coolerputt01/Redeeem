@@ -1,0 +1,147 @@
+/*Base CSS selector.*/
+
+/*CSS variables*/
+:root{
+  --baseblue :#28bdd1;
+  --white:#fff;
+  --black:#000;
+  --whiteshade:#f7f5f5;
+}
+
+
+*{
+  border:none;
+  outline:none;
+  box-sizing: border-box;
+  font-family:"Poppins",sans-serif;
+  color:var(--black);
+}
+body,html{
+  background-color:var(--baseblue);
+}
+/*Nav Bar*/
+.nav-bar{
+  width:90vw;
+  display: flex;
+  height:10vh;
+  align-items: center;
+  justify-content:space-between;
+  background: var(--white);
+  padding:10px;
+  backdrop-filter: blur(10px);
+  border-radius:50px;
+}
+.nav-logo{
+  width:3em;
+  height:3em;
+  object-fit: cover;
+  mix-blend-mode:multiply;
+}
+.nav-brand{
+  color:grey;
+}
+/*Hero*/
+.hero{
+  border-radius:12px;
+  position:relative;
+  display: flex;
+  padding:18px;
+  align-items: center;
+  justify-content:space-between;
+  flex-direction: column;
+  margin-top:25%;
+  overflow-x:hidden;
+  z-index:100;
+  background-color:var(--whiteshade);
+}
+.circle1{
+  position: absolute;
+  background-color:var(--white);
+  width:15em;
+  height:15em;
+  border-radius:50%;
+  left:50%;
+  top:30%;
+  z-index:-1;
+}
+.circle2{
+  position: absolute;
+  background-color:var(--white);
+  width:15em;
+  height:15em;
+  border-radius:50%;
+  right:70%;
+  top:-10%;
+  z-index:-1;
+}
+.hero-text{
+  font-size: 2em;
+  width:90vw;
+  color: transparent;
+  -webkit-text-stroke:2px var(--black);
+  padding:2px;
+  z-index: 10;
+}
+.hero-subtext{
+  width:90vw;
+  margin-left:2px;
+  z-index:10;
+}
+.join-us-btn{
+  padding:18px;
+  border-radius:50px;
+  border:none;
+  outline:none;
+  background-color:var(--baseblue);
+  color: var(--white);
+  margin-top:30px;
+}
+
+/*Info Section*/
+.help{
+  margin-top: 15%;
+  background-color:var(--baseblue);
+}
+.card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.card-img{
+  width:15em;
+  height:15em;
+  object-fit:cover;
+  border-radius:14px;
+  margin:0 auto;
+}
+.card-img-container{
+  position: relative;
+  margin:0 auto ;
+}
+.card-img-container::after{
+  content:'';
+  width:5em;
+  height:5em;
+  position: absolute;
+  top:0%;
+  left:0%;
+  background-image:url('/assets/logo.png');
+  background-position: center;
+  background-size:cover;
+  opacity:0.6;
+}
+.card-text{
+  font-size: 0.9em;
+  width:70vw;
+  text-align:center;
+  color:var(--white);
+}
+/*Responsiveness*/
+
+@media (min-width: 768px){
+  .hero-text{
+    width:50vw;
+    padding:18px;
+  }
+}
