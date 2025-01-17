@@ -26,10 +26,12 @@ const app = createApp({
   //Checking if it is mounted properly.
   mounted(){
     console.log('checker to confirm if app is mounted properly.');
-    const signInButton = document.querySelector('.join-us-btn');
-    signInButton.addEventListener('click',()=>{
-      document.href = "signin.html";
-    })
+    
+    },
+    methods:{
+      reDirect(){
+      window.location.href = "signin.html"
+    }
   }
 });
 //Mount app.
