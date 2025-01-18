@@ -6,7 +6,7 @@ import {createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
 const Card = {
   template:`<div class="card" data-aos="fade-right">
         <div class="card-img-container">
-          <img :src="cardImg" alt="Card Image" class="card-img"/>
+          <img :src="cardImg" alt="Card Image" class="card-img" loading="lazy"/>
         </div>
         <p class="card-text">{{cardText}}
 </p>

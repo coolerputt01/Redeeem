@@ -6,6 +6,7 @@
   --white:#fff;
   --black:#000;
   --whiteshade:#f7f5f5;
+  --whiteshader:#f9f9f9;
 }
 
 *{
@@ -71,23 +72,27 @@ body,html{
 }
 .circle1{
   position: absolute;
-  background-color:var(--white);
+  background-color:var(--whiteshader);
   width:15em;
   height:15em;
   border-radius:50%;
   left:50%;
   top:30%;
   z-index:-1;
+  border:5px solid var(--whiteshade);
+  box-shadow:5px 5px 28px 32px rgba(0,0,0,0.1);
 }
 .circle2{
   position: absolute;
-  background-color:var(--white);
+  background-color:var(--whiteshader);
   width:15em;
   height:15em;
   border-radius:50%;
   right:70%;
   top:-10%;
   z-index:-1;
+  border:5px solid var(--whiteshade);
+  box-shadow:5px 5px 28px 28px rgba(0,0,0,0.15);
 }
 .hero-text{
   font-size: 2em;
