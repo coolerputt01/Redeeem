@@ -53,6 +53,7 @@ const SignUp = {
       }
 
       try {
+        signUpButton.innerHTML = '<div class="lds-ring"><div></div><div></div><div></div><div></div></div>'
         const userCredential = await createUserWithEmailAndPassword(auth, email, password);
         const user = userCredential.user;
 
