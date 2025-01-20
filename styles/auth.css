@@ -293,3 +293,8 @@
   color: #555;
   cursor: pointer;
 }
+.verify-subtext{
+  font-size:0.7em;
+  text-align:center;
+  line-height:30px;
+}

@@ -20,16 +20,22 @@ import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/11.2.0
   
   /*Vue*/
   
-    const SignIn = { 
+  const SignIn = { 
   template: '#signin-template',
   mounted() {
     console.log('SignIn Component Mounted');
   }
 };
-const Home={
+const Home = {
   template:'#home',
   mounted(){
     console.log('home');
+  }
+}
+const Verify = {
+  template:'#verify',
+  mounted(){
+    console.log('verify')
   }
 }
 const SignUp = {
@@ -76,7 +82,7 @@ const SignUp = {
         console.log('User signed up and verification email sent!');
 
         // Redirect to home route
-        router.push('/home');
+        router.push('/verify');
 
         signUpButton.innerHTML = "Sign Up";
       } catch (err) {
@@ -95,6 +101,8 @@ const SignUp = {
 const routes = [
   { path: '/signin', component: SignIn },
   { path:'/home',component:Home}
+  ,
+  {path:'/verify', component:Verify}
   ,
   { path: '/signup', component: SignUp },
   { path: '/', redirect: '/signin' }, // Default route
