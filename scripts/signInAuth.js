@@ -26,8 +26,13 @@ import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/11.2.0
     console.log('SignIn Component Mounted');
   }
 };
-
-const SignUp = { 
+const Home={
+  template:'#home',
+  mounted(){
+    console.log('home');
+  }
+}
+const SignUp = {
   template: '#signup-template',
   mounted() {
     const emailInput = document.getElementById('email');
@@ -43,17 +48,21 @@ const SignUp = {
       const confirmPassword = confirmPasswordInput.value.trim();
 
       if (!email || !password || !confirmPassword) {
-        console.error('All fields are required');
+        alert('All fields are required');
         return;
       }
 
       if (password !== confirmPassword) {
         console.error('Passwords do not match');
+        const errorToast = document.querySelector('.card');
+        const errorText = document.querySelector('.message-text');
+        errorToast.style.display = 'block';
+        errorText.textContent = "Passwords do not match";
         return;
       }
 
       try {
-        signUpButton.innerHTML = '<div class="lds-ring"><div></div><div></div><div></div><div></div></div>'
+        signUpButton.innerHTML = '<div class="lds-ring"><div></div><div></div><div></div><div></div></div>';
         const userCredential = await createUserWithEmailAndPassword(auth, email, password);
         const user = userCredential.user;
 
@@ -65,8 +74,18 @@ const SignUp = {
         });
 
         console.log('User signed up and verification email sent!');
+
+        // Redirect to home route
+        router.push('/home');
+
+        signUpButton.innerHTML = "Sign Up";
       } catch (err) {
+        const errorToast = document.querySelector('.card');
+        const errorText = document.querySelector('.message-text');
+        errorToast.style.display = 'block';
+        errorText.textContent = err.message;
         console.error('Error signing up:', err.message);
+        signUpButton.innerHTML = "Sign Up";
       }
     });
   }
@@ -75,6 +94,8 @@ const SignUp = {
 // Define routes
 const routes = [
   { path: '/signin', component: SignIn },
+  { path:'/home',component:Home}
+  ,
   { path: '/signup', component: SignUp },
   { path: '/', redirect: '/signin' }, // Default route
   { path: '/:pathMatch(.*)*', redirect: '/signin' } // Catch-all route
