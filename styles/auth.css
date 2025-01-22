@@ -296,5 +296,18 @@
 .verify-subtext{
   font-size:0.7em;
   text-align:center;
-  line-height:30px;
+  line-height:15px;
+}
+.verified-btn{
+  padding:18px;
+  color:#fff;
+  border:none;
+  outline:none;
+  border-radius:50px;
+  background-color:var(--baseblue); 
+}
+.verify-img{
+  width:15em;
+  height:15em;
+  object-fit:cover;
 }

@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
-import { getAuth, createUserWithEmailAndPassword ,sendEmailVerification} from "https://www.gstatic.com/firebasejs/11.2.0/firebase-auth.js";
+import { getAuth, createUserWithEmailAndPassword ,sendEmailVerification,signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/11.2.0/firebase-auth.js";
 import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-firestore.js";
 import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-database.js";
  
@@ -24,6 +24,22 @@ import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/11.2.0
   template: '#signin-template',
   mounted() {
     console.log('SignIn Component Mounted');
+    const emailInput = document.getElementById('email');
+    const passwordInput = document.getElementById('password');
+    const signInButton = document.querySelector('.login-button');
+    
+    signInButton.addEventListener('click' ,async (e)=>{
+      e.preventDefault();
+      try{
+    const userCredential = await signInWithEmailAndPassword(auth, email.value.trim(), password.value.trim());
+    const user = userCredential.user;
+    
+    console.log("User signed in successfully:", user);
+    router.push('/home');
+      }catch(err){
+        alert(err.message)
+      }
+  });
   }
 };
 const Home = {
@@ -34,8 +50,27 @@ const Home = {
 }
 const Verify = {
   template:'#verify',
+  data(){
+    return {
+      emailVerified:false
+    }
+  },
+  methods:{
+    async checkEmailVerification(){
+      try{
+      await auth.currentUser.reload();
+      this.emailVerified = auth.currentUser.emailVerified;
+      if(this.emailVerified){
+        router.push('/home');
+        }
+      }catch(err){
+        console.log(err.message);
+      }
+    }
+  },
   mounted(){
-    console.log('verify')
+    console.log('verify');
+    this.checkEmailVerification();
   }
 }
 const SignUp = {
