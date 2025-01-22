@@ -131,7 +131,6 @@ const SignUp = {
     });
   }
 };
-
 // Define routes
 const routes = [
   { path: '/signin', component: SignIn },
@@ -146,7 +145,7 @@ const routes = [
 
 // Create Vue Router instance
 const router = VueRouter.createRouter({
-  history: VueRouter.createWebHistory(),
+  history: VueRouter.createWebHashHistory(),
   routes
 });
 
