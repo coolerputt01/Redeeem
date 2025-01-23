@@ -62,6 +62,11 @@ const Verify = {
       this.emailVerified = auth.currentUser.emailVerified;
       if(this.emailVerified){
         router.push('/home');
+        }else{
+          const errorToast = document.querySelector('.cardv');
+        const errorText = document.querySelector('.message-text');
+        errorToast.style.display = 'block';
+        errorText.textContent = "Please Verify your email.";
         }
       }catch(err){
         console.log(err.message);

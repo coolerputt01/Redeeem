@@ -18,9 +18,11 @@ const Verify = {
         if (this.emailVerified) {
           // Redirect to home if verified
           router.push('/home');
+        }else{
+          
         }
       } catch (err) {
-        console.error('Error checking verification status:', err);
+        alert('Error checking verification status:', err);
       } finally {
         this.checkingStatus = false; // Stop loader
       }

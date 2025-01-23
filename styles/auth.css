@@ -243,6 +243,24 @@
   display:none;
   margin:12px;
 }
+.cardv{
+  width: 75vw;
+  border-radius: 28px;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  background-color: #ffffff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  position: absolute;
+  top:15%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 15px;
+  display:none;
+  margin:12px;
+  z-index:10;
+}
 .wave {
   position: absolute;
   transform: rotate(90deg);
