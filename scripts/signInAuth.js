@@ -76,7 +76,6 @@ const Verify = {
   },
   mounted(){
     console.log('verify');
-    this.checkEmailVerification();
   }
 }
 const SignUp = {
