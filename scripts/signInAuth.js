@@ -37,7 +37,13 @@ import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/11.2.0
     console.log("User signed in successfully:", user);
     router.push('/home');
       }catch(err){
-        alert(err.message)
+        alert(err.message);
+        const errorToast = document.querySelector('.card');
+        const errorText = document.querySelector('.message-text');
+        
+        errorText.textContent = err.message;
+        
+        errorToast.classList.add('show');
       }
   });
   }
@@ -63,11 +69,13 @@ const Verify = {
       if(this.emailVerified){
         router.push('/home');
         }else{
-        alert('hi');
+        
         const errorToast = document.querySelector('.cardv');
         const errorText = document.querySelector('.message-text');
-        errorToast.style.display = 'block';
+        
         errorText.textContent = "Please Verify your email.";
+        errorToast.classList.add('showv');
+        
         }
       }catch(err){
         alert(err.message);
@@ -102,7 +110,9 @@ const SignUp = {
         console.error('Passwords do not match');
         const errorToast = document.querySelector('.card');
         const errorText = document.querySelector('.message-text');
-        errorToast.style.display = 'block';
+        
+        errorToast.classList.add('show');
+        
         errorText.textContent = "Passwords do not match";
         return;
       }
@@ -128,8 +138,10 @@ const SignUp = {
       } catch (err) {
         const errorToast = document.querySelector('.card');
         const errorText = document.querySelector('.message-text');
-        errorToast.style.display = 'block';
+        
         errorText.textContent = err.message;
+        
+        errorToast.classList.add('show');
         console.error('Error signing up:', err.message);
         signUpButton.innerHTML = "Sign Up";
       }
