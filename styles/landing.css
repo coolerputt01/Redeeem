@@ -11,13 +11,19 @@
 
 *{
   border:none;
-  outline:none;
+  padding:none;
   box-sizing: border-box;
   font-family:"Poppins",sans-serif;
   color:var(--black);
 }
 body,html{
   background-color:var(--baseblue);
+}
+#app{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  flex-direction:column;
 }
 /*Nav Bar*/
 .nav-bar{
