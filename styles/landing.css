@@ -98,7 +98,6 @@ body,html{
   font-size: 2em;
   width:90vw;
   color: var(--black);
-  -webkit-text-stroke:2px var(--black);
   padding:2px;
   z-index: 10;
 }
