@@ -17,7 +17,7 @@
   color:var(--black);
 }
 body,html{
-  background-color:red;
+  background-color:var(--baseblue);
 }
 #app{
   display: flex;
