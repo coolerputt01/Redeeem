@@ -30,7 +30,7 @@ const app = createApp({
     },
     methods:{
       reDirect(){
-      window.location.href = "signin.html"
+      window.location.href = "indexi.html"
     }
   }
 });
