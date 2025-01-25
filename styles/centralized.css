@@ -344,3 +344,20 @@
   height:15em;
   object-fit:cover;
 }
+.info-card{
+  width:75vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card-img{
+  width:100%;
+  border-radius: 14px;
+}
