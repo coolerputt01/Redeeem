@@ -360,4 +360,7 @@
 .card-img{
   width:100%;
   border-radius: 14px;
+  height:13vh;
+  width:100%;
+  object-fit:cover;
 }
