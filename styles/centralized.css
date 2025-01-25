@@ -358,9 +358,8 @@
   align-items: center;
 }
 .card-img{
-  width:100%;
   border-radius: 14px;
-  height:6vh;
+  height:3vh;
   width:60%;
   object-fit:cover;
 }
