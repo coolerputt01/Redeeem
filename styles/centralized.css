@@ -350,12 +350,17 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-shadow:5px 5px 28px 28px rgba(0,0,0,0.15);
 }
 .card-text{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.card-text > *{
+  text-align: left;
+  width:100%;
 }
 .card-img{
   border-radius: 14px;
