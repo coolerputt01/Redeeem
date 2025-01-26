@@ -54,6 +54,29 @@ const Home = {
     console.log('home and verified.');
   }
 }
+const InfoCard = {
+  template:`<div class="info-card">
+      <img :src="image" alt="rccg-teens-img" class="card-img">
+      <div class="card-text">
+      <h3 class="info-card-text">{{ infoTitle }}</h3>
+      <p class="info-card-subtext">{{ infoDesc }}</p>
+      </div>
+    </div>`,
+    props:{
+      image:{
+        type:String,
+        required:true,
+      },
+      infoTitle:{
+        type:String,
+        required:true,
+      },
+      infoDesc:{
+        type: String,
+        required: true,
+      }
+    }
+}
 const Verify = {
   template:'#verify',
   data(){
@@ -167,5 +190,6 @@ const router = VueRouter.createRouter({
 });
 
 const vueApp = Vue.createApp({});
+vueApp.component('info-card',InfoCard);
 vueApp.use(router);
 vueApp.mount('#app');
