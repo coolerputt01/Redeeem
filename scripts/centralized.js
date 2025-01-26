@@ -51,7 +51,7 @@ import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/11.2.0
 const Home = {
   template:'#home',
   mounted(){
-    console.log('home');
+    console.log('home and verified.');
   }
 }
 const Verify = {
