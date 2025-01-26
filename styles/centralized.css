@@ -381,6 +381,7 @@
 }
 .info-card:hover{
   background-color:black;
+  box-shadow:5px 5px 28px 28px rgba(0,0,0,0.15);
   .card-text > *{
     color:white !important;
   }
