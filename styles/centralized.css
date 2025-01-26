@@ -386,14 +386,16 @@
   padding:6px;
   transition:all 750ms;
 }
-.info-card:hover{
-  background-color:var(--baseblue);
-  box-shadow:5px 5px 28px 28px rgba(0,0,0,0.15);
-  .card-text > *{
-    color:white !important;
-    font-size: 1.3em !important;
-  }
-  .card-img{
-    transform: rotateZ(5deg);
-  }
+.info-card:hover {
+  background-color: var(--baseblue);
+  box-shadow: 5px 5px 28px 28px rgba(0, 0, 0, 0.15);
+}
+
+.info-card:hover .card-text>* {
+  color: white !important;
+  font-size: 1.3em !important;
+}
+
+.info-card:hover .card-img {
+  transform: rotateZ(5deg);
 }
