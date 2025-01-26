@@ -391,7 +391,7 @@
   box-shadow:5px 5px 28px 28px rgba(0,0,0,0.15);
   .card-text > *{
     color:white !important;
-    scale:1.5em;
+    scale:1.6em;
   }
   .card-img{
     transform: rotateZ(5deg);
