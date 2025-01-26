@@ -356,6 +356,7 @@
 }
 .card-text{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   line-height:1px;
