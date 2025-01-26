@@ -391,11 +391,14 @@
   box-shadow: 5px 5px 28px 28px rgba(0, 0, 0, 0.15);
 }
 
-.info-card:hover .card-text>* {
+.info-card:hover .card-text>h3{
   color: white !important;
   font-size: 1.1em !important;
 }
-
+.info-card:hover .card-text > p{
+  color: white !important;
+  font-size: 0.8em !important;
+}
 .info-card:hover .card-img {
   transform: rotateZ(5deg);
 }
