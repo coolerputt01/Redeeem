@@ -358,7 +358,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  line-height:2px;
+  line-height:1px;
 }
 .card-text > *{
   text-align: left;
@@ -366,6 +366,7 @@
 }
 .info-card-subtext{
   color: lightgrey;
+  font-size:0.7em;
 }
 .card-img{
   border-radius: 14px;
