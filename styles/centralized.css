@@ -391,4 +391,7 @@
   .card-text > *{
     color:white !important;
   }
+  .card-img{
+    transform: rotateX(50deg) scale(1.1);
+  }
 }
