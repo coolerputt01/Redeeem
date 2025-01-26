@@ -364,7 +364,7 @@
 }
 .card-text > *{
   text-align: left;
-  width:70%;
+  width:100%;
 }
 .info-card-subtext{
   color: grey;
