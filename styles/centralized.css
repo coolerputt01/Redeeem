@@ -356,7 +356,7 @@
 }
 .card-text{
   display: flex;
-  flex-direction: column;
+  gap:5%;
   justify-content: center;
   align-items: center;
   line-height:-5px;
