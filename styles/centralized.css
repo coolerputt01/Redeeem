@@ -378,3 +378,6 @@
   padding:6px;
   transition:all 750ms;
 }
+.info-card::hover{
+  background-color:black;
+}
