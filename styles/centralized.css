@@ -375,4 +375,5 @@
   width:60%;
   object-fit:cover;
   padding:6px;
+  transition:all 750ms;
 }
