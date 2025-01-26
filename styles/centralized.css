@@ -348,7 +348,7 @@
   width:75vw;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   box-shadow:inset 5px 5px 28px 28px rgba(0,0,0,0.15);
   border-radius:28px;
@@ -366,7 +366,7 @@
   width:100%;
 }
 .info-card-subtext{
-  color: lightgrey;
+  color: grey;
   font-size:0.7em;
 }
 .card-img{
