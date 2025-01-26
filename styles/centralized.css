@@ -350,9 +350,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow:5px 5px 28px 28px rgba(0,0,0,0.15);
+  box-shadow:inset 5px 5px 28px 28px rgba(0,0,0,0.15);
   border-radius:28px;
-  padding:29px;
+  padding:19px;
 }
 .card-text{
   display: flex;
@@ -374,5 +374,5 @@
   height:13vh;
   width:60%;
   object-fit:cover;
-  padding:8px;
+  padding:6px;
 }
