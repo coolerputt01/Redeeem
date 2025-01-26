@@ -371,6 +371,7 @@
 .card-img{
   border-radius: 14px;
   height:13vh;
+  padding:29px;
   width:60%;
   object-fit:cover;
 }
