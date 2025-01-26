@@ -379,7 +379,7 @@
   padding:6px;
   transition:all 750ms;
 }
-.info-card:hover{
+.info-card:hover .card-text{
   background-color:black;
   color: white !important;
 }
