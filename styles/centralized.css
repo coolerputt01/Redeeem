@@ -358,14 +358,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  line-height:2px;
 }
 .card-text > *{
   text-align: left;
   width:100%;
-  line-height:2px;
 }
 .info-card-subtext{
-  color:grey;
+  color: lightgrey;
 }
 .card-img{
   border-radius: 14px;
