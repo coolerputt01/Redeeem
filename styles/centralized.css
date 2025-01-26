@@ -353,7 +353,13 @@
   box-shadow:inset 5px 5px 28px 28px rgba(0,0,0,0.15);
   border-radius:28px;
   padding:19px;
+  margin:18px;
   transition:all 350ms ease-in-out;
+}
+.home-head{
+  position: absolute;
+  top:5%;
+  left:2%;
 }
 .card-text{
   display: flex;
@@ -380,7 +386,7 @@
   transition:all 750ms;
 }
 .info-card:hover{
-  background-color:black;
+  background-color:var(--baseblue);
   box-shadow:5px 5px 28px 28px rgba(0,0,0,0.15);
   .card-text > *{
     color:white !important;
