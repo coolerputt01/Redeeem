@@ -359,7 +359,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  line-height:1px;
+  line-height:0.5px;
 }
 .card-text > *{
   text-align: left;
@@ -374,4 +374,5 @@
   height:13vh;
   width:60%;
   object-fit:cover;
+  padding:8px;
 }
