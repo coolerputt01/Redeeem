@@ -392,9 +392,9 @@
   .card-text > *{
     color:white !important;
   }
-  .info-card-text{
-    font-size:1.5em;
-  }
+   .info-card-text {
+   font-size: 1.5em !important;
+ }
   .card-img{
     transform: rotateZ(5deg);
   }
