@@ -392,6 +392,6 @@
     color:white !important;
   }
   .card-img{
-    transform: rotateZ(50deg);
+    transform: rotateZ(10deg);
   }
 }
