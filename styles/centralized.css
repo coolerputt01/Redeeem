@@ -353,6 +353,7 @@
   box-shadow:inset 5px 5px 28px 28px rgba(0,0,0,0.15);
   border-radius:28px;
   padding:19px;
+  transition:all 750ms ease-in-out;
 }
 .card-text{
   display: flex;
