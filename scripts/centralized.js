@@ -52,6 +52,10 @@ const Home = {
   template:'#home',
   mounted(){
     console.log('home');
+    const infoCard = document.querySelector('.info-card');
+    if(infoCard.style.backgroundColor === "black"){
+      document.querySelector('.card-text').style.color = '#fff'
+    }
   }
 }
 const Verify = {
