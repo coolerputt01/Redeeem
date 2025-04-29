@@ -1,0 +1,41 @@
+---
+import '../styles/styles.css';
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/logo.png" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+		<title> RCCG Teens</title>
+	</head>
+	<body>
+		<section>
+			<main class="main-section">
+				<nav class="nav">
+					<div class="nav-header">
+						<div class="nav-text">
+							<img src="/logo.png" alt="Logo" class="nav-logo" />
+							<h1 class="nav-title"><mark>RCCG</mark> <span>Teens</span></h1>
+						</div>
+						<button class="hamburger" id="hamburger"> <img src="/menu.svg" alt="RCCG Teens menu" class="ham-button"></button>
+					</div>
+					<nav class="sidebar" id="sidebar">
+						<ul class="nav-links">
+							<li><a href="#">Home</a></li>
+							<li><a href="#">Events</a></li>
+							<li><a href="#">Ministries</a></li>
+							<li><a href="#">Sermons</a></li>
+							<li><a href="#">Contact</a></li>
+						</ul>
+					</nav>
+				</nav>
+			</main>
+		</section>
+		<script type="module" src="/scripts/index.js"></script>
+	</body>
+</html>

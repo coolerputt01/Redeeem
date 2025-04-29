@@ -1,0 +1,11 @@
+const navButton = document.querySelector('.hamburger');
+const sidebar = document.querySelector('.sidebar');
+const img = document.querySelector('.ham-button');
+navButton.addEventListener('click', (e) => {
+    sidebar.classList.toggle('active');
+    if (sidebar.classList.contains('active')) {
+        img.src = 'cancel.svg'; // Replace with your active image path
+    } else {
+        img.src = 'menu.svg'; // Replace with your default image path
+    }
+});
