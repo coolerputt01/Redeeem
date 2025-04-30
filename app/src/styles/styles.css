@@ -49,10 +49,21 @@
     justify-content: flex-start;
     align-items: center;
 }
+.quote {
+    width: 3em;
+    height: 3em;
+    object-fit: cover;
+}
+.main-quote {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
 .nav-text > * {
     font-size: 1.8em;
     font-weight: 600;
-    color: blueviolet;
+    color: #8a2be2;
 }
 .nav-title {
     display: flex;
@@ -82,7 +93,35 @@
 	transition: transform 0.3s ease-in-out;
 	z-index: 1000;
 }
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    padding: 8px;
+    z-index: 10;
+}
 
+.hero-bible-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    z-index: 10;
+}
+.hero-text {
+    text-align: center;
+    font-size: 1.7em;
+    font-weight: 600;
+}
+.hero-book {
+    color: white;
+    text-align: right;
+    width: 70%;
+    font-weight: 600;
+}
 /* Hide sidebar on mobile */
 @media (max-width: 768px) {
 	.sidebar {
@@ -116,10 +155,37 @@
     align-items: center;
 }
 /* Show hamburger on mobile */
-@media (max-width: 768px) {
+@media (min-width: 768px) {
 	.hamburger {
-		display: block;
+		display: none;
 	}
+    .sidebar {
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: transparent;
+        height: 7vh;
+    }
+    .linkk > a{
+        font-size: 1em !important;
+    }
+    .nav-header {
+        flex-direction: row;
+    }
+    .nav-links {
+        display: flex;
+        justify-content: center !important;
+        align-items: center;
+        flex-direction: row;
+        gap: 0.3em !important;
+        height: auto !important;
+    }
+    .nav-links li {
+        width: auto !important;
+    }
+    .hero-bible-section {
+        width: 55vw !important;
+    }
 }
 
 /* Sidebar content */

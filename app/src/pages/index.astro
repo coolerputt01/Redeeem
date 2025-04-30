@@ -1,5 +1,9 @@
 ---
 import '../styles/styles.css';
+import axios from 'axios';
+
+const bibleVerse = await axios.get('https://bible-api.com/data/web/random');
+const verse = await bibleVerse.data.random_verse;
 ---
 
 <html lang="en">
@@ -26,14 +30,20 @@ import '../styles/styles.css';
 					</div>
 					<nav class="sidebar" id="sidebar">
 						<ul class="nav-links">
-							<li><a href="#">Home</a></li>
-							<li><a href="#">Events</a></li>
-							<li><a href="#">Ministries</a></li>
-							<li><a href="#">Sermons</a></li>
-							<li><a href="#">Contact</a></li>
+							<li class="linkk"><a href="#">Home</a></li>
+							<li class="linkk"><a href="#">Events</a></li>
+							<li class="linkk"><a href="#">Ministries</a></li>
+							<li class="linkk"><a href="#">Sermons</a></li>
+							<li class="linkk"><a href="#">Contact</a></li>
 						</ul>
 					</nav>
 				</nav>
+				<div class="hero-section">
+					<div class="hero-bible-section">
+						<span class="main-quote"><img src="/quote.svg" class="quote"><h1 class="hero-text"> { verse.text } </h1><img src="/quote.svg" class="quote"></span>
+						<p class="hero-book"> { verse.book } { verse.chapter }:{ verse.verse } </p>
+					</div>
+				</div>
 			</main>
 		</section>
 		<script type="module" src="/scripts/index.js"></script>
