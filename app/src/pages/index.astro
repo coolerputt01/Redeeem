@@ -1,6 +1,7 @@
 ---
 import '../styles/styles.css';
 import axios from 'axios';
+import NavBar from '../components/NavBar.astro';
 
 const bibleVerse = await axios.get('https://bible-api.com/data/web/random');
 const verse = await bibleVerse.data.random_verse;
@@ -18,34 +19,17 @@ const verse = await bibleVerse.data.random_verse;
 		<title> RCCG Teens</title>
 	</head>
 	<body>
-		<section>
-			<main class="main-section">
-				<nav class="nav">
-					<div class="nav-header">
-						<div class="nav-text">
-							<img src="/logo.png" alt="Logo" class="nav-logo" />
-							<h1 class="nav-title"><mark>RCCG</mark> <span>Teens</span></h1>
-						</div>
-						<button class="hamburger" id="hamburger"> <img src="/menu.svg" alt="RCCG Teens menu" class="ham-button"></button>
-					</div>
-					<nav class="sidebar" id="sidebar">
-						<ul class="nav-links">
-							<li class="linkk"><a href="#">Home</a></li>
-							<li class="linkk"><a href="#">Events</a></li>
-							<li class="linkk"><a href="#">Ministries</a></li>
-							<li class="linkk"><a href="#">Sermons</a></li>
-							<li class="linkk"><a href="#">Contact</a></li>
-						</ul>
-					</nav>
-				</nav>
+		<main>
+			<section class="main-section">
+				<NavBar />
 				<div class="hero-section">
 					<div class="hero-bible-section">
 						<span class="main-quote"><img src="/quote.svg" class="quote"><h1 class="hero-text"> { verse.text } </h1><img src="/quote.svg" class="quote"></span>
 						<p class="hero-book"> { verse.book } { verse.chapter }:{ verse.verse } </p>
 					</div>
 				</div>
-			</main>
-		</section>
+			</section>
+		</main>
 		<script type="module" src="/scripts/index.js"></script>
 	</body>
 </html>

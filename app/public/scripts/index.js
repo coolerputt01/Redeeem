@@ -4,8 +4,8 @@ const img = document.querySelector('.ham-button');
 navButton.addEventListener('click', (e) => {
     sidebar.classList.toggle('active');
     if (sidebar.classList.contains('active')) {
-        img.src = 'cancel.svg'; // Replace with your active image path
+        img.src = '../cancel.svg';
     } else {
-        img.src = 'menu.svg'; // Replace with your default image path
+        img.src = '../menu.svg'; 
     }
 });

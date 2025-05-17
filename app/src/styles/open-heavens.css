@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans',sans-serif;
+    color: #fff;
+}
+html {
+    background-color: #000;
+}
+
+main {
+    scroll-behavior: smooth;
+    position: relative;
+}
+.page-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 10em;
+    margin-bottom: 5em;
+}
+.text-area > p {
+    width: 86% !important;
+}
+div {
+    margin-bottom: 2em;
+}
+div > h1 {
+    text-align: center;
+    font-size: 2.3em !important;
+}
+.text-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 25px;
+}
